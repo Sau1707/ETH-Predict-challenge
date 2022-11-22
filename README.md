@@ -2,6 +2,8 @@
 
 See [Ocean reposity](https://github.com/oceanprotocol/predict-eth) for all the details
 
+<br />
+
 ## Goal
 The goal of the challenge it's to predict as close as possible the [ETH](https://ethereum.org/it/) price for each hour up to 12h in the future.
 The judges will look ad the following hours for the results:
@@ -9,6 +11,8 @@ The judges will look ad the following hours for the results:
 Prediction at times: Dec 12, 2022 at 1:00 UTC, 2:00, ..., 12:00 (12 predictions total)
 ```
 Click [here](https://github.com/oceanprotocol/predict-eth/blob/main/challenges/main2.md#appendix-what-judges-will-do) to see how it will be judged
+
+<br />
 
 ## Approach
 Since it's impossible to know the perfect model in advance and what factor influence the price, the only solution it's to try a lot of diffrent methods and brute force to find the best one.
@@ -29,6 +33,8 @@ The program will then run 12h back in time. It will generate an AI model, and th
 }
 ```
 
+<br />
+
 ## AI
 The AI will have a range of layers and the ammount of neurons per layer will be decided by the algorith:
 
@@ -36,6 +42,10 @@ a) The range of layer it's limited by: `MIN_LAYER_COUNT` and `MAX_LAYER_COUNT`
 b) The ammount of neuroS can be limited by: `MIN_NEURONS_COUNT` and `MAX_NEURONS_COUNT` \
 The program will chose a random value in the middle to start, then it start increasing and decreasing the amount. The program will find the optimal direction and try to find the best amount of neurons for each layer.
 c) The ammout of data it's decided by `STARTLINE` and it's the amount of hour to go back in time.
+
+For smeplicity only `linear regression` will be used as algorithm for the model (for now)
+
+<br />
 
 ## Parameters that can be used
 
